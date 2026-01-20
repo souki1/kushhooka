@@ -52,10 +52,10 @@ function Navbar() {
                 About
               </a>
               <a
-                href="#contact"
+                href="Reservation"
                 className="text-gray-200 hover:text-amber-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
-                Contact
+                Reservation
               </a>
             </div>
           </div>
@@ -122,7 +122,7 @@ function Navbar() {
               className="text-gray-200 hover:text-amber-400 block px-3 py-2 rounded-md text-base font-medium transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Menu
+              Menu3456
             </a>
             <a
               href="#gallery"
@@ -150,7 +150,7 @@ function Navbar() {
               className="text-gray-200 hover:text-amber-400 block px-3 py-2 rounded-md text-base font-medium transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Contact
+              Reservation
             </a>
           </div>
         </div>
