@@ -8,13 +8,20 @@ function Navbar() {
   }
 
   return (
-    <nav className="w-full bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-lg">
+    <nav className="w-full border-b border-white/10 bg-[#0b0b0f] shadow-[0_12px_40px_rgba(0,0,0,0.45)]">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-2xl font-bold text-white hover:text-amber-400 transition-colors">
-              KushHookah
+            <a href="/" className="flex items-center">
+              <img
+                src="/images/kush-logo.png"
+                alt="Kush Hookah Lounge"
+                className="h-10 md:h-14 w-auto object-contain"
+                width={56}
+                height={56}
+                loading="lazy"
+              />
             </a>
           </div>
 
