@@ -1,22 +1,25 @@
 src/
-├── assets/                # Images, icons, fonts
-│   └── logo.svg
+├── assets/                 # Static assets (images, icons, fonts)
+│   ├── images/
+│   ├── icons/
+│   └── fonts/
 │
-├── components/            # Reusable UI components
-│   ├── common/
+├── components/             # Reusable UI components
+│   ├── common/             # Buttons, Inputs, Modals, etc.
 │   │   ├── Button.tsx
 │   │   ├── Input.tsx
 │   │   └── Loader.tsx
-│   └── layout/
+│   │
+│   └── layout/             # Layout-related components
 │       ├── Navbar.tsx
 │       ├── Sidebar.tsx
 │       └── Footer.tsx
 │
-├── layouts/               # Page layouts (wrappers)
+├── layouts/                # Page-level layouts
 │   ├── MainLayout.tsx
 │   └── AuthLayout.tsx
 │
-├── pages/                 # Route-level pages
+├── pages/                  # Route-level pages
 │   ├── Home.tsx
 │   ├── About.tsx
 │   ├── Login.tsx
@@ -24,27 +27,26 @@ src/
 │   ├── Dashboard.tsx
 │   └── NotFound.tsx
 │
-├── routes/                # Routing config
+├── routes/                 # Application routing
 │   └── router.tsx
 │
-├── hooks/                 # Custom hooks
+├── hooks/                  # Custom React hooks
 │   └── useAuth.ts
 │
-├── services/              # API calls (backend later)
+├── services/               # API services & backend integration
 │   ├── api.ts
 │   └── auth.service.ts
 │
-├── store/                 # Global state (Redux/Zustand later)
+├── store/                  # Global state management
 │   └── auth.store.ts
 │
-├── utils/                 # Helpers & constants
+├── utils/                  # Utility functions & constants
 │   ├── constants.ts
 │   └── helpers.ts
 │
-├── styles/                # Global styles
+├── styles/                 # Global & shared styles
 │   └── globals.css
 │
-├── App.tsx
-├── main.tsx
-└── index.css             
-
+├── App.tsx                 # Root component
+├── main.tsx                # Application entry point
+└── index.css               # Tailwind CSS import
