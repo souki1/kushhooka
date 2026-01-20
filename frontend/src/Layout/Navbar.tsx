@@ -14,7 +14,7 @@ function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/" className="text-2xl font-bold text-white hover:text-amber-400 transition-colors">
-              KushHooka
+              KushHookah
             </a>
           </div>
 
