@@ -17,9 +17,8 @@ function Navbar() {
               <img
                 src="/images/kush-logo.png"
                 alt="Kush Hookah Lounge"
-                className="h-10 md:h-14 w-auto object-contain"
-                width={56}
-                height={56}
+                className="w-25 h-16"
+            
                 loading="lazy"
               />
             </a>
