@@ -1,17 +1,13 @@
 
-import './App.css'
-import Home from './Pages/Home'
+import Navbar from "./Layout/Navbar"
+import Home from "./Pages/Home"
 
-
-function App() {
-
+export default function App() {
   return (
-  <>
-
-    <Home />
-  </>
-  
+    <>
+      <Navbar />
+      <Home />
+    </>
   )
 }
 
-export default App
