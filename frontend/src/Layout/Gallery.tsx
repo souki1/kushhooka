@@ -1,6 +1,8 @@
 import { useState } from 'react'
-import hero from '../assets/images/hero.jpg'
-import kushLogo from '../assets/images/kush-logo.png'
+import entrance from '../assets/entrance .jpeg'
+import inside from '../assets/inside.jpeg'
+import outside from '../assets/outside.jpeg'
+import outside1 from '../assets/outside1.jpeg'
 
 interface GalleryImage {
   id: number
@@ -17,56 +19,56 @@ function Gallery() {
   const galleryImages: GalleryImage[] = [
     {
       id: 1,
-      src: hero,
+      src: entrance,
       alt: 'Kush Hookah Lounge Interior',
       title: 'Premium Lounge Experience',
       description: 'Experience our luxurious hookah lounge with premium flavors and a relaxing atmosphere.'
     },
     {
       id: 2,
-      src: kushLogo,
+      src: inside,
       alt: 'Kush Hookah Logo',
       title: 'Kush Hookah Brand',
       description: 'Our signature brand representing quality and excellence in hookah culture.'
     },
     {
       id: 3,
-      src: hero,
+      src: outside,
       alt: 'Hookah Setup',
       title: 'Expert Hookah Setup',
       description: 'Our skilled staff prepares each hookah with precision and care for the perfect session.'
     },
     {
       id: 4,
-      src: kushLogo,
+      src: outside1,    
       alt: 'Lounge Atmosphere',
       title: 'Chill Atmosphere',
       description: 'Relax and unwind in our comfortable lounge setting, perfect for groups and individuals.'
     },
     {
       id: 5,
-      src: hero,
+      src: entrance,
       alt: 'Premium Flavors',
       title: 'Wide Selection of Flavors',
       description: 'Choose from our extensive menu of premium hookah flavors from top brands.'
     },
     {
       id: 6,
-      src: kushLogo,
+      src: inside,
       alt: 'VIP Experience',
       title: 'VIP Hookah Experience',
       description: 'Upgrade to our VIP hookah service with natural coal and luxury hookahs.'
     },
     {
       id: 7,
-      src: hero,
+      src: outside,
       alt: 'Social Gathering',
       title: 'Perfect for Groups',
       description: 'Bring your friends and enjoy a memorable hookah session together.'
     },
     {
       id: 8,
-      src: kushLogo,
+      src: outside1,
       alt: 'Late Night Hours',
       title: 'Open Late',
       description: 'We stay open until 2 AM, perfect for late-night sessions and gatherings.'
@@ -82,7 +84,7 @@ function Gallery() {
   }
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#07070a]">
+    <section id="gallery" className="py-16 px-4 sm:px-6 lg:px-8 bg-[#07070a]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
