@@ -76,12 +76,12 @@ function Hero() {
       </div>
 
       {/* MENU placeholder (next we’ll build real cards) */}
-      <section id="menu" className="mx-auto max-w-6xl px-6 py-14">
+      {/* <section id="menu" className="mx-auto max-w-6xl px-6 py-14">
         <h2 className="text-2xl font-semibold tracking-tight">Menu</h2>
         <p className="mt-3 text-white/70">
           Next: premium menu cards (Hookah Flavors + Drinks) like your mockup.
         </p>
-      </section>
+      </section> */}
     </main>
     </>
     )
