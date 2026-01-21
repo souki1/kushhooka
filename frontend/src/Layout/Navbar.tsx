@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import logo from '../assets/images/kush-logo.png'
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -15,7 +15,7 @@ function Navbar() {
           <div className="flex-shrink-0">
             <a href="/" className="flex items-center">
               <img
-                src="/images/kush-logo.png"
+                src={logo}
                 alt="Kush Hookah Lounge"
                 className="w-25 h-16"
             

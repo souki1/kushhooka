@@ -1,3 +1,4 @@
+import hero from '../assets/images/hero.jpg'
 function Hero() {
     return (
         <>
@@ -5,7 +6,7 @@ function Hero() {
       {/* HERO */}
       <section
         className="relative isolate min-h-[86vh] overflow-hidden bg-cover bg-center brightness-[1.12] contrast-[1.05]"
-        style={{ backgroundImage: "url('/images/hero.jpg')" }}
+        style={{ backgroundImage: `url(${hero})` }}
       >
         {/* ONE premium overlay (balanced brightness) */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-black/40" />
