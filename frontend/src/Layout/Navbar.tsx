@@ -8,7 +8,7 @@ function Navbar() {
   }
 
   return (
-    <nav className="w-full border-b border-white/10 bg-[#0b0b0f] shadow-[0_12px_40px_rgba(0,0,0,0.45)]">
+    <nav className="w-full border-b sticky top-0 z-50 border-white/10 bg-transparent/60 shadow-[0_12px_40px_rgba(0,0,0,0.45)]">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -27,13 +27,7 @@ function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-6">
-              <a
-                href="#home"
-                className="text-gray-200 hover:text-amber-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-               Contact US 
-              </a>
-              <a
+            <a
                 href="#menu"
                 className="text-gray-200 hover:text-amber-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
@@ -46,10 +40,10 @@ function Navbar() {
                 Gallery
               </a>
               <a
-                href="#pricing"
+                href="Reservation"
                 className="text-gray-200 hover:text-amber-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
-                Pricing
+                Reservation
               </a>
               <a
                 href="#about"
@@ -58,10 +52,17 @@ function Navbar() {
                 About
               </a>
               <a
-                href="Reservation"
+                href="#home"
                 className="text-gray-200 hover:text-amber-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
-                Reservation
+               Contact US 
+              </a>
+
+              <a
+                href="#reviews"
+                className="text-gray-200 hover:text-amber-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Reviews
               </a>
             </div>
           </div>
