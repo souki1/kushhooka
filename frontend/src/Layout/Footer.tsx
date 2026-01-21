@@ -1,14 +1,8 @@
-import { useState } from 'react'
+
 
 function Footer() {
-    const [email, setEmail] = useState('')
 
-    const handleSubscribe = (e: React.FormEvent) => {
-        e.preventDefault()
-        // Handle subscription logic here
-        console.log('Subscribed:', email)
-        setEmail('')
-    }
+
 
     return (
             <>
