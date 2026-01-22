@@ -1,72 +1,7 @@
-import { useState } from 'react'
-import entrance from '../assets/entrance .jpeg'
-import inside from '../assets/inside.jpeg'
-import outside from '../assets/outside.jpeg'
-import outside1 from '../assets/outside1.jpeg'
-
-interface AboutCard {
-  id: number
-  image: string
-  title: string
-  description: string
-  details: string
-}
-
 function About() {
-  const [selectedCard, setSelectedCard] = useState<AboutCard | null>(null)
-
-  const aboutCards: AboutCard[] = [
-    {
-      id: 1,
-      image: entrance,
-      title: 'Our Story',
-      description: 'Founded with a passion for creating the perfect hookah experience, Kush Hookah Lounge has been serving the Skokie community since our opening.',
-      details: 'We started with a simple vision: to create a space where people can relax, socialize, and enjoy premium hookah in a comfortable atmosphere. Our team is dedicated to providing exceptional service and the highest quality products. We source our flavors from the best brands in the industry and ensure every hookah is prepared with care and expertise.'
-    },
-    {
-      id: 2,
-      image: inside,
-      title: 'Premium Experience',
-      description: 'We offer a wide selection of premium hookah flavors from top brands including Al Fakher, Fumari, Starbuzz, and Serbetli.',
-      details: 'Our premium experience includes VIP hookah options with natural coal and luxury hookahs. We maintain strict quality standards and use only the finest materials. Our staff is trained to prepare each hookah session perfectly, ensuring optimal flavor and smoke quality. We also offer fruit heads and special preparations for those looking for an extra special experience.'
-    },
-    {
-      id: 3,
-      image: outside,
-      title: 'Our Location',
-      description: 'Conveniently located at 3327 Dempster St, Skokie, IL 60076, we are easily accessible and open late until 2 AM.',
-      details: 'Our lounge is designed for comfort and relaxation. We have spacious seating areas perfect for groups, intimate corners for couples, and a welcoming atmosphere for solo visitors. The location features ample parking and is close to public transportation. We\'re open late to accommodate your schedule, making us the perfect spot for after-work relaxation or late-night gatherings.'
-    },
-    {
-      id: 4,
-      image: outside1,
-      title: 'Our Mission',
-      description: 'To provide an exceptional hookah experience that brings people together in a welcoming and comfortable environment.',
-      details: 'Our mission is to create memorable experiences for every guest. We believe in the power of community and connection, and our lounge serves as a gathering place where friendships are formed and good times are shared. We are committed to maintaining the highest standards of quality, service, and hospitality. Every visit should feel special, and we work hard to make that happen.'
-    },
-    {
-      id: 5,
-      image: entrance,
-      title: 'Quality & Service',
-      description: 'We pride ourselves on using only premium products and providing exceptional customer service to every guest.',
-      details: 'Quality is at the heart of everything we do. From the selection of our hookah flavors to the preparation of each session, we never compromise. Our staff undergoes regular training to stay updated on the latest techniques and products. We also maintain a clean and hygienic environment, ensuring that every aspect of your visit meets our high standards. Your satisfaction is our priority.'
-    },
-    {
-      id: 6,
-      image: inside,
-      title: 'Community Focus',
-      description: 'We are more than just a hookah lounge - we are a community gathering place where people come together.',
-      details: 'Community is important to us. We host events, support local artists, and create a space where everyone feels welcome. Whether you\'re a regular or a first-time visitor, you\'ll find a friendly atmosphere and people who share your appreciation for quality hookah. We value our customers and their feedback, constantly working to improve and enhance the experience we provide.'
-    }
-  ]
-
-  const handleCardClick = (card: AboutCard) => {
-    setSelectedCard(card)
-  }
-
-  const closeModal = () => {
-    setSelectedCard(null)
-  }
+  const phoneNumber = '+18476765874'
+  const address = '3327 Dempster St, Skokie, IL 60076'
+  const mapSearchUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`
 
   return (
     <section id="about" className="py-16 px-4 sm:px-6 lg:px-8 bg-[#07070a]">
@@ -76,135 +11,158 @@ function About() {
           <h2 className="text-4xl md:text-5xl font-bold text-amber-400 mb-4 tracking-wider">
             About Us
           </h2>
-          <p className="text-white/70 text-lg">
-            Learn more about Kush Hookah Lounge and what makes us special
-          </p>
         </div>
 
-        {/* Scrollable About Cards Container */}
-        <div className="relative">
-          {/* Scrollable Cards */}
-          <div className="overflow-x-auto scrollbar-hide pb-4">
-            <div className="flex gap-6 px-2" style={{ scrollbarWidth: 'thin' }}>
-              {aboutCards.map((card) => (
-                <div
-                  key={card.id}
-                  onClick={() => handleCardClick(card)}
-                  className="flex-shrink-0 w-80 md:w-96 cursor-pointer group"
-                >
-                  <div className="relative overflow-hidden rounded-lg shadow-xl transition-transform duration-300 group-hover:scale-105 bg-black border border-amber-400/20">
-                    {/* Image */}
-                    <img
-                      src={card.image}
-                      alt={card.title}
-                      className="w-full h-48 object-cover"
-                    />
-                    {/* Content */}
-                    <div className="p-6">
-                      <h3 className="text-amber-400 font-bold text-xl mb-3">
-                        {card.title}
-                      </h3>
-                      <p className="text-white/90 text-sm leading-relaxed mb-4 line-clamp-3">
-                        {card.description}
-                      </p>
-                      <p className="text-amber-400 text-sm font-semibold">
-                        Click to read more →
-                      </p>
-                    </div>
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                      <div className="absolute bottom-0 left-0 right-0 p-6">
-                        <p className="text-white text-sm font-semibold">
-                          Learn More
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+        {/* About Hookah Section */}
+        <div className="mb-16">
+          <div className="bg-black border border-amber-400/20 rounded-2xl p-8 md:p-12 shadow-2xl">
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-3xl md:text-4xl font-bold text-amber-400 mb-6 text-center">
+                What is Hookah?
+              </h3>
+              
+              <div className="space-y-6 text-white/90 text-base md:text-lg leading-relaxed">
+                <p>
+                  Hookah, also known as shisha, waterpipe, or narghile, is a traditional Middle Eastern smoking device that has been enjoyed for centuries. It consists of a water-filled base, a pipe, a bowl for tobacco, and a hose with a mouthpiece. The tobacco is heated with charcoal, and the smoke passes through water before being inhaled, creating a smooth and flavorful experience.
+                </p>
+                
+                <p>
+                  The art of hookah smoking dates back to ancient Persia and India, where it was originally used for smoking tobacco and herbs. Over time, it spread throughout the Middle East, North Africa, and eventually to the rest of the world. Today, hookah has become a popular social activity, bringing people together in lounges and cafes to relax, socialize, and enjoy a variety of flavored tobacco blends.
+                </p>
+                
+                <p>
+                  At Kush Hookah Lounge, we honor this rich tradition while providing a modern, comfortable environment. We offer premium hookah flavors from renowned brands like Al Fakher, Fumari, Starbuzz, and Serbetli. Our expert staff carefully prepares each hookah session, ensuring optimal flavor and smoke quality. Whether you're a seasoned hookah enthusiast or trying it for the first time, we're here to provide an exceptional experience.
+                </p>
+                
+                <div className="mt-8 pt-8 border-t border-amber-400/20">
+                  <h4 className="text-2xl font-bold text-amber-400 mb-4">
+                    Why Choose Kush Hookah Lounge?
+                  </h4>
+                  <ul className="space-y-3 list-disc list-inside text-white/80">
+                    <li>Premium quality hookah flavors from top international brands</li>
+                    <li>Expert preparation by trained staff for the perfect session</li>
+                    <li>Comfortable and welcoming atmosphere for groups and individuals</li>
+                    <li>VIP options with natural coal and luxury hookahs</li>
+                    <li>Late-night hours until 2 AM for your convenience</li>
+                    <li>Clean, hygienic environment with strict quality standards</li>
+                  </ul>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Scroll Indicator */}
-          <div className="mt-4 text-center">
-            <p className="text-white/50 text-sm">
-              ← Scroll to see more about us →
-            </p>
-          </div>
-        </div>
-
-        {/* Modal for Expanded View */}
-        {selectedCard && (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
-            onClick={closeModal}
-          >
-            <div
-              className="relative max-w-4xl w-full max-h-[90vh] bg-black rounded-lg overflow-hidden shadow-2xl border border-amber-400/30"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Close Button */}
-              <button
-                onClick={closeModal}
-                className="absolute top-4 right-4 z-10 bg-black/70 hover:bg-black/90 text-white rounded-full p-2 transition-colors"
-                aria-label="Close modal"
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-
-              {/* Image */}
-              <img
-                src={selectedCard.image}
-                alt={selectedCard.title}
-                className="w-full h-64 object-cover"
-              />
-
-              {/* Details */}
-              <div className="p-8 bg-gradient-to-t from-black to-black/80 overflow-y-auto max-h-[calc(90vh-16rem)]">
-                <h3 className="text-amber-400 font-bold text-3xl mb-4">
-                  {selectedCard.title}
-                </h3>
-                <p className="text-white/90 text-base leading-relaxed mb-4">
-                  {selectedCard.description}
-                </p>
-                <p className="text-white/80 text-base leading-relaxed">
-                  {selectedCard.details}
-                </p>
               </div>
             </div>
           </div>
-        )}
-      </div>
+        </div>
 
-      {/* Custom Scrollbar Styles */}
-      <style>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          height: 8px;
-        }
-        .scrollbar-hide::-webkit-scrollbar-track {
-          background: rgba(255, 255, 255, 0.1);
-          border-radius: 4px;
-        }
-        .scrollbar-hide::-webkit-scrollbar-thumb {
-          background: rgba(230, 196, 122, 0.5);
-          border-radius: 4px;
-        }
-        .scrollbar-hide::-webkit-scrollbar-thumb:hover {
-          background: rgba(230, 196, 122, 0.7);
-        }
-      `}</style>
+        {/* Contact & Map Section */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Contact Information */}
+          <div className="bg-black border border-amber-400/20 rounded-lg p-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-amber-400 mb-6">
+              Contact Us
+            </h3>
+            
+            <div className="space-y-6">
+              {/* Phone */}
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-amber-400/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-white/70 text-sm mb-1">Phone</p>
+                  <a
+                    href={`tel:${phoneNumber}`}
+                    className="text-amber-400 font-semibold text-lg hover:text-amber-300 transition-colors"
+                  >
+                    {phoneNumber}
+                  </a>
+                  <p className="text-white/50 text-xs mt-1">Click to call</p>
+                </div>
+              </div>
+
+              {/* Address */}
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-amber-400/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-white/70 text-sm mb-1">Address</p>
+                  <p className="text-white font-semibold text-lg">
+                    {address}
+                  </p>
+                </div>
+              </div>
+
+              {/* Hours */}
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-amber-400/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-white/70 text-sm mb-1">Hours</p>
+                  <p className="text-white font-semibold text-lg">
+                    Open until 2 AM
+                  </p>
+                  <p className="text-white/50 text-xs mt-1">Daily</p>
+                </div>
+              </div>
+
+              {/* Call Button */}
+              <div className="pt-4">
+                <a
+                  href={`tel:${phoneNumber}`}
+                  className="inline-flex items-center justify-center w-full px-6 py-4 bg-amber-400 hover:bg-amber-300 text-black font-semibold rounded-lg transition-colors shadow-lg"
+                >
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  Call Now to Reserve
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Map */}
+          <div className="bg-black border border-amber-400/20 rounded-lg overflow-hidden">
+            <div className="h-full min-h-[400px] relative">
+              {/* Note: For production, you'll need to get an embed URL from Google Maps
+                  Go to Google Maps, search for the address, click Share > Embed a map
+                  and copy the iframe src URL */}
+              <iframe
+                src={`https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`}
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: '400px' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Kush Hookah Lounge Location"
+                className="w-full h-full"
+              />
+            </div>
+            <div className="p-4 bg-black/50">
+              <p className="text-white/70 text-sm text-center">
+                <a
+                  href={mapSearchUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-amber-400 hover:text-amber-300 transition-colors inline-flex items-center gap-2"
+                >
+                  <span>Open in Google Maps</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }
