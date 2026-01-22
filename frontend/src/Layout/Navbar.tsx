@@ -8,8 +8,8 @@ function Navbar() {
   }
 
   return (
-    <nav className="w-full border-b sticky top-0 z-50 border-white/10 bg-transparent/60 shadow-[0_12px_40px_rgba(0,0,0,0.45)]">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="w-full border-b sticky top-0 z-50 border-white/10 bg-transparent/70 shadow-[0_12px_40px_rgba(0,0,0,0.45)]">
+      <div className="w-full mx-auto px-6 sm:px-10 lg:px-12">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
